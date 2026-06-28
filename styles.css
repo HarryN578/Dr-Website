@@ -1,176 +1,170 @@
-/* Flexbox for the paragraphs in my HTML */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
+}
+
+.purple {
+  background-color: purple;
 }
 
 #first_para {
-    color: blue;
+  color: rgb(16, 16, 224);
 }
 
 .odd_para {
-    color: red;
+  color: red;
 }
 
 p {
-    text-align: center;
-    margin: 0 auto;
-    width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .dashed {
-    border-style: dashed;
+  border-style: dashed;
 }
 
 nav {
-    display: flex;
-    background-color: green;
-    padding: 10px;
+  display: flex;
+  background-color: green;
+  padding: 10px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 999;  
-    margin-top: 100px; 
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 999;
 }
 
 .nav-links a {
-    padding: 15px;
-    text-decoration: none;
-    color: white;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
 }
 
 .page-content {
-    display: none;
-    padding: 20px;
-}
-#home {
-    display: block;
+  display: none;
+  padding: 20px;
 }
 
+#home {
+  display: block;
+}
 
 #home:target {
-    display: block;
+  display: block;
 }
 
-#order:target {
-    display: block;
+#book:target {
+  display: block;
 }
+
 #menu:target {
-    display: block;
+  display: block;
 }
+
 #about:target {
-    display: block;
+  display: block;
 }
-#location:target {
-    display: block;
-}
+
 #contact:target {
-    display: block;
+  display: block;
 }
 
 figure {
-    text-align: center;
+  text-align: center;
 }
 
-.responsive-img {
-    max-width: 100%;
-    height: auto;
+.image {
+  max-width: 100%;
+  height: auto;
 }
 
 form {
-    max-width: 500px;
-    margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .form-element {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-element label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form-element input {
-    width: 100%;
-    padding: 8px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
 .form-element input[type="submit"] {
-    background-color: cyan;
-    color: magenta;
+  background-color: cyan;
+  color: magenta;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .hamburger {
-    display: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;   
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links.active {
-    display: flex;
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 999px) {
-    .hamburger {
-        display: block;
-    }
-    
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: orange;
-    }
-    
+  .hamburger {
+    display: block;
+  }
 
-    
-    .responsive-img {
-        width: 100%;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: orange;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .image {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-    .hamburger {
-        display: none;
-    }
-    
-    .nav-links {
-        display: flex !important;
-    }
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+  }
 }
