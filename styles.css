@@ -1,0 +1,176 @@
+/* Flexbox for the paragraphs in my HTML */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+#first_para {
+    color: blue;
+}
+
+.odd_para {
+    color: red;
+}
+
+p {
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.dashed {
+    border-style: dashed;
+}
+
+nav {
+    display: flex;
+    background-color: green;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;  
+    margin-top: 100px; 
+}
+
+.nav-links a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.page-content {
+    display: none;
+    padding: 20px;
+}
+#home {
+    display: block;
+}
+
+
+#home:target {
+    display: block;
+}
+
+#order:target {
+    display: block;
+}
+#menu:target {
+    display: block;
+}
+#about:target {
+    display: block;
+}
+#location:target {
+    display: block;
+}
+#contact:target {
+    display: block;
+}
+
+figure {
+    text-align: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-element {
+    margin-bottom: 15px;
+}
+
+.form-element label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-element input {
+    width: 100%;
+    padding: 8px;
+}
+
+.form-element input[type="submit"] {
+    background-color: cyan;
+    color: magenta;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;   
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+@media screen and (max-width: 999px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: orange;
+    }
+    
+
+    
+    .responsive-img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-links {
+        display: flex !important;
+    }
+}
