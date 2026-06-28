@@ -6,23 +6,20 @@
     <meta name="author" content="HN">
     <title>Dr Apples Surgery</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="class.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h1>Bagels Shop</h1>
-    <div class="wrapper">
-        <nav>
-            <label for="menu-toggle" class="hamburger" onclick="myFunction()">☰</label>
-            <ul class="nav-links" id="myLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#book">Booking Form</a></li>
-                <li><a href="#about us">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-
-            </ul>
-        </nav>
-    </div>
+    <h1>Dr Apples Surgery</h1>
+    <nav>
+        <label class="hamburger" onclick="myFunction()">☰</label>
+        <ul class="nav-links" id="myLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#book">Booking Form</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
 
     <div id="home" class="page-content">
         <div class="container">
@@ -40,8 +37,7 @@
         <form action="/register" method="post">
             <div class="form-element">
                 <label for="phonenum">Telephone number:</label><br>
-                <input type="tel" id="phonenum" name="phonenum" pattern="\d{3}-\d{3}-\d{4}"
-                    placeholder="012-345-6789" required>
+                <input type="tel" id="phonenum" name="phonenum" pattern="\d{3}-\d{3}-\d{4}" placeholder="012-345-6789" required>
             </div>
             <div class="form-element">
                 <label for="email">Email Address:</label><br>
@@ -56,7 +52,7 @@
                 <input type="text" id="name" name="name" maxlength="20" autofocus required>
             </div>
             <div class="form-element">
-                <label for="item1">A short paragraph about why you would like to see the doctor??</label><br>
+                <label for="item1">A short paragraph about why you would like to see the doctor?</label><br>
                 <input type="text" id="item1" name="item1" maxlength="100" required>   
             </div>
             <div class="form-element">
@@ -65,35 +61,19 @@
         </form>
     </div>
 
-    <div id="menu" class="page-content">
-        <h2>Menu</h2>
-    </div>
-
     <div id="about" class="page-content">
         <h2>About Us</h2>
         <div class="container">
-            <p class="purple dashed" id="first_para">We are a team of dedicated professionals who have multiple years of experience in the medical field. Our story 
-                started 12 years ago with Dr Apples who is still the surgery director. He had a dream to run a surgery where every patient is treated by only the top doctors
-                in the country and most importantly with a smile. Every day we strive to achieve our goal and we are proud to say that after 12 delightful years we have overachieved
-                in every single goal we set for ourselves. If you want to get top medical care and be traeated in a wonderful environment then come and register with us!
-            </p>
+            <p class="purple dashed" id="first_para">We are a team of dedicated professionals who have multiple years of experience in the medical field. Our story started 12 years ago with Dr Apples who is still the surgery director. He had a dream to run a surgery where every patient is treated by only the top doctors in the country and most importantly with a smile. Every day we strive to achieve our goal and we are proud to say that after 12 delightful years we have overachieved in every single goal we set for ourselves. If you want to get top medical care and be treated in a wonderful environment then come and register with us!</p>
         </div>
-
     </div>
-
 
     <div id="contact" class="page-content">
         <h2>Contact Us</h2>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: info@drapples.com</p>
     </div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
-</script>
+
+    <script src="script.js"></script>
 </body>
 </html>

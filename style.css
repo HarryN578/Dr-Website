@@ -87,6 +87,7 @@ nav {
 .container {
     display: flex;
     flex-direction: column;
+}-direction: column;
     align-items: center;
 }
 
