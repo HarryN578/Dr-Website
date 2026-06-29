@@ -9,7 +9,7 @@ http.createServer((req, res) => {
     } else if (req.url === '/register' && req.method === 'POST') {
         res.end('<h1>Booking confirmed!</h1><a href="/">Home</a>');
     } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
-        res.end('Page not found');
+        res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
+        res.end(fs.readFileSync(__dirname + '/index.html'));
     }
 }).listen(3000);

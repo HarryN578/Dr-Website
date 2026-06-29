@@ -7,7 +7,6 @@
     <title>Dr Apples Surgery</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="images/docpic.png" href="image/x-icon"
 </head>
 
 <body>
@@ -26,8 +25,14 @@
         <div class="container">
             <p class="yellow dashed" id="first_para">Welcome to Dr Apples Surgery</p>
             <p class="odd_para">We offer the best care to all our patients.</p>
-
         </div>
+    
+        <div id="not-found-page" class="page-content" style="display: none;">
+            <h1>404 - Page Not Found</h1>
+            <p>Sorry, the page you're looking for doesn't exist.</p>
+            <a href="/">Return to Home</a>
+        </div>
+
         <figure>  
             <button onclick="toggleText()" class="action-button">Learn More</button>
             <p id="hidden-text" style="display: none; color: blue; margin: 20px;">
@@ -70,7 +75,7 @@
         </form>
     </div>
 
-<script>
+    <script>
         function toggleText() {
             const text = document.getElementById("hidden-text");
             if (text) {
@@ -86,7 +91,7 @@
         }
 
         function validateForm(event) {
-            event.preventDefault();
+            event.preventDefault
 
             const phoneInput = document.getElementById("phonenum");
             const emailInput = document.getElementById("email");
@@ -95,7 +100,6 @@
             const phone = phoneInput.value.trim();
             const email = emailInput.value.trim();
             const name = nameInput.value.trim();
-
             document.getElementById("phonenum-error").textContent = "";
             document.getElementById("email-error").textContent = "";
             document.getElementById("name-error").textContent = "";
@@ -136,16 +140,11 @@
         <p>Email: drapples@drapples.com</p>
     </div>
 
-    <div class="page-content" style="display: block;">
-        <h2>404 - Page Not Found</h2>
-        <p>Sorry, the page you're looking for doesn't exist.</p>
-        <a href="/" style="background-color: cyan; padding: 10px 20px; text-decoration: none; color: magenta;">Return to Home</a>
-    </div>
-
     <footer>
-        <p>Dr Apples Surgery LTD.  </p>
+        <p>Dr Apples Surgery LTD.</p>
         <p>The best surgery in the world! 2014-2026</p>
     </footer>
+
 
 </body>
 </html>
