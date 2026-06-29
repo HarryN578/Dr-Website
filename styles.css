@@ -65,7 +65,7 @@ nav {
 }
 
 #home {
-    display: block;  /* Show home by default */
+    display: block;  
 }
 
 #home:target,
