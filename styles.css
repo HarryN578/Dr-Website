@@ -65,21 +65,12 @@ nav {
 }
 
 #home {
-    display: block;
+    display: block;  /* Show home by default */
 }
 
-#home:target {
-    display: block;
-}
-
-#book:target {
-    display: block;
-}
-
-#about:target {
-    display: block;
-}
-
+#home:target,
+#book:target,
+#about:target,
 #contact:target {
     display: block;
 }
@@ -95,7 +86,7 @@ nav {
 }
 
 .purple {
-    background-color: purple;
+    background-color: rgb(67, 241, 76);
     color: white;
 }
 
@@ -131,6 +122,12 @@ figure {
 form {
     max-width: 500px;
     margin: 0 auto;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
 }
 
 .form-element {
@@ -190,4 +187,24 @@ form {
     .nav-links {
         display: flex !important;
     }
+}
+footer {
+    background-color: #ec1010;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+.action-button {
+    background-color: blueviolet;
+    color: rgb(0, 255, 34);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
 }

@@ -7,6 +7,7 @@
     <title>Dr Apples Surgery</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="images/docpic.png" href="image/x-icon"
 </head>
 
 <body>
@@ -25,23 +26,30 @@
         <div class="container">
             <p class="yellow dashed" id="first_para">Welcome to Dr Apples Surgery</p>
             <p class="odd_para">We offer the best care to all our patients.</p>
+
         </div>
-        <figure>       
-            <img src="images/doctor.jpg" alt="Doctor" class="image">
-            <figcaption>Dr Apples Surgery</figcaption>
+        <figure>  
+            <button onclick="toggleText()" class="action-button">Learn More</button>
+            <p id="hidden-text" style="display: none; color: blue; margin: 20px;">
+              We offer top-quality medical care with experienced doctors. Book an appointment today!
+            </p>
+            <img src="images/docpic.png" alt="Doc" class="image">     
+            <figcaption>Dr Apples</figcaption>
         </figure>
     </div>
 
     <div id="book" class="page-content">
         <h2>Booking Form</h2>
-        <form action="/register" method="post">
+        <form action="/register" method="post" novalidate onsubmit="return validateForm(event)">
             <div class="form-element">
                 <label for="phonenum">Telephone number:</label><br>
-                <input type="tel" id="phonenum" name="phonenum" pattern="\d{3}-\d{3}-\d{4}" placeholder="012-345-6789" required>
+                <input type="tel" id="phonenum" name="phonenum" placeholder="012-345-6789" required>
+                <p class="error-message" id="phonenum-error"></p>
             </div>
             <div class="form-element">
                 <label for="email">Email Address:</label><br>
                 <input type="email" id="email" name="email" required>
+                <p class="error-message" id="email-error"></p>
             </div>
             <div class="form-element">
                 <label for="adress">Address:</label><br>
@@ -50,6 +58,7 @@
             <div class="form-element">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" maxlength="20" autofocus required>
+                <p class="error-message" id="name-error"></p>
             </div>
             <div class="form-element">
                 <label for="item1">A short paragraph about why you would like to see the doctor?</label><br>
@@ -61,6 +70,59 @@
         </form>
     </div>
 
+<script>
+        function toggleText() {
+            const text = document.getElementById("hidden-text");
+            if (text) {
+                text.style.display = text.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        function myFunction() {
+            const links = document.getElementById("myLinks");
+            if (links) {
+                links.classList.toggle("active");
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const phoneInput = document.getElementById("phonenum");
+            const emailInput = document.getElementById("email");
+            const nameInput = document.getElementById("name");
+
+            const phone = phoneInput.value.trim();
+            const email = emailInput.value.trim();
+            const name = nameInput.value.trim();
+
+            document.getElementById("phonenum-error").textContent = "";
+            document.getElementById("email-error").textContent = "";
+            document.getElementById("name-error").textContent = "";
+
+            let valid = true;
+
+            if (!/^\d{3}-\d{3}-\d{4}$/.test(phone)) {
+                document.getElementById("phonenum-error").textContent = "Phone must be in format: 012-345-6789";
+                valid = false;
+            }
+            if (!email.includes("@")) {
+                document.getElementById("email-error").textContent = "Please enter a valid email address";
+                valid = false;
+            }
+            if (name.length < 2) {
+                alert("Name must be at least 2 characters");
+                return false;
+            }
+
+            if (valid) {
+                event.target.submit();
+            }
+
+            return false;
+        }
+    </script>
+
     <div id="about" class="page-content">
         <h2>About Us</h2>
         <div class="container">
@@ -70,10 +132,20 @@
 
     <div id="contact" class="page-content">
         <h2>Contact Us</h2>
-        <p>Phone: 123-456-7890</p>
-        <p>Email: info@drapples.com</p>
+        <p>Phone: 567-892-6587</p>
+        <p>Email: drapples@drapples.com</p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="page-content" style="display: block;">
+        <h2>404 - Page Not Found</h2>
+        <p>Sorry, the page you're looking for doesn't exist.</p>
+        <a href="/" style="background-color: cyan; padding: 10px 20px; text-decoration: none; color: magenta;">Return to Home</a>
+    </div>
+
+    <footer>
+        <p>Dr Apples Surgery LTD.  </p>
+        <p>The best surgery in the world! 2014-2026</p>
+    </footer>
+
 </body>
 </html>
